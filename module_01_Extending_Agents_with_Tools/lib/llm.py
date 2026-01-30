@@ -24,7 +24,7 @@ class LLM:
         openai_api_key = api_key or os.getenv("OPENAI_API_KEY")
 
         self.client = OpenAI(
-            base_url = "https://openai.vocareum.com/v1",
+            #base_url = "https://openai.vocareum.com/v1",
             api_key=openai_api_key
             ) # if api_key else OpenAI()
         self.tools: Dict[str, Tool] = {
