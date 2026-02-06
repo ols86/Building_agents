@@ -4,7 +4,11 @@ venv/
 __pycache__/
 .ipynb_checkpoints/
 # Secrets
-.env # ignore .env file in the root directory
-*.env # ignore all .env files
-**/.env # ignore .env files in any subdirectory
-.env.* # ignore .env files with any extension, e.g. .env.local, .env.production
+# ignore .env file in the root directory
+.env
+# ignore all .env files
+*.env
+# ignore .env files in any subdirectory
+**/.env
+# ignore .env files with any extension, e.g. .env.local, .env.production
+.env.*
