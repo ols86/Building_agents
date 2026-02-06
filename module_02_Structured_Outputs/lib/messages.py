@@ -3,14 +3,15 @@ from typing import Optional, Union, List, Dict, Any, Literal
 
 
 class BaseMessage(BaseModel):
-    content: Optional[str] = ""
+    content: Optional[str] = "" # content is a variable that can hold the text of the message, but it’s optional and defaults to an empty string if not provided.
+    # so when we must write content = "<add content >"
 
     def dict(self) -> Dict:
         return dict(self)
 
 
 class SystemMessage(BaseMessage):
-    role: Literal["system"] = "system"
+    role: Literal["system"] = "system" # role is a variable that is defined as a literal string "system". This means that any instance of SystemMessage will have its role attribute set to "system" and cannot be changed to anything else. This is useful for distinguishing system messages from other types of messages in the application.
 
 
 class UserMessage(BaseMessage):
